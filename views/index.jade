@@ -1,0 +1,25 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+  div 
+    if user
+      -var ob = JSON.stringify(user, null, 2)
+      div 
+        pre #{ob}
+      div #{'____________________________________________________'}
+      h2 Google Drive
+      form(action='/file/upload', method='POST', enctype='multipart/form-data')
+        h4(style='display: inline-block; margin-right: 10px') Upload file:
+        input(type="file", name='file')
+        p #{'_________'}
+        input(type="submit")
+        p #{'__________________________'}
+      div
+        h4 File Uploaded
+      div #{'____________________________________________________'}
+      div(style='margin-top: 10px') 
+        a(href="/auth/logout") Logout
+    else
+      a(href="/auth/login") Login

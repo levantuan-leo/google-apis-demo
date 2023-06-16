@@ -1,0 +1,22 @@
+{
+  "name": "upload-file-gg-drive",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "nodemon ./bin/www"
+  },
+  "dependencies": {
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "dotenv": "^16.1.4",
+    "express": "~4.16.1",
+    "express-session": "^1.17.3",
+    "formidable": "^2.1.1",
+    "google-auth-library": "^8.8.0",
+    "http-errors": "~1.6.3",
+    "jade": "~1.11.0",
+    "jsonwebtoken": "^9.0.0",
+    "morgan": "~1.9.1",
+    "nodemon": "^2.0.22"
+  }
+}
